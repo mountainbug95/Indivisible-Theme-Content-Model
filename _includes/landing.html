@@ -1,0 +1,31 @@
+<article id="{{ page.section_id }}" class="panel special">
+    {% if page.img_path %}
+        <div class="image">
+            <img src="{{ page.img_path }}" alt="" data-position="{{ page.img_data_position }}" />
+        </div>
+    {% endif %}
+    <div class="content">
+        <div class="inner">
+            <header>
+                <h1>{{ page.title }}</h1>
+                {% if page.subtitle %}
+                    <p>{{ page.subtitle | newline_to_br }}</p>
+                {% endif %}
+            </header>
+            <nav id="nav">
+                <ul class="actions stacked special animated spinY">
+                    {% for item in page.sections %}
+                        <li><a href="#{{ item.section_id }}" class="button">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            <ul class="icons">
+                {% if page.social_links %}
+                    {% for link in page.social_links %}
+                        <li><a href="{{ link.link_url }}" class="icon {{ link.icon }}"><span class="label">{{ link.title }}</span></a></li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</article>

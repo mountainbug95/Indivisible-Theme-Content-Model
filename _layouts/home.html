@@ -1,0 +1,30 @@
+---
+layout: body
+---
+
+{% include landing.html %}
+
+{% for section in page.sections %}
+<article id="{{ section.section_id }}" class="panel secondary">
+    {% if section.img_path %}
+    <div class="image">
+        <img src="{{ section.img_path }}" alt="" data-position="{{ section.img_data_position }}" />
+    </div>
+    {% endif %}
+    <div class="content">
+        <ul class="actions animated spinX">
+            <li><a href="#{{ site.landing_id }}" class="button small back">Back</a></li>
+        </ul>
+        <div class="inner">
+            <header>
+                <h2>{{ section.title }}</h2>
+                {{ section.subtitle | markdownify }}
+            </header>
+            {% if section.component %}
+                
+                {% include {{ section.component }} section=section %}
+            {% endif %}
+        </div>
+    </div>
+</article>
+{% endfor %}

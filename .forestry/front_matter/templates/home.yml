@@ -1,0 +1,71 @@
+---
+label: Home
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Page Title
+    description: The bold text displayed at the top of the page
+    config:
+      required: true
+  - type: textarea
+    name: subtitle
+    label: Page Subtitle
+    description: The text displayed below the page title
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: file
+    name: img_path
+    label: Image
+    description: The image displayed on the left side of the page
+  - type: text
+    name: img_data_position
+    label: Image Data Position
+    description: Controls the position of an image in the image container
+  - type: text
+    name: section_id
+    hidden: true
+    default: home
+    config:
+      required: true
+  - type: field_group_list
+    name: social_links
+    label: Social Media Icons
+    description: >-
+      A list of social media icons displayed along the bottom of the landing
+      page menu
+    config:
+      labelField: title
+    fields:
+      - type: text
+        name: title
+        label: Icon Title
+        config:
+          required: true
+      - type: text
+        name: icon
+        label: Icon
+        description: Font Awesome icon
+      - type: text
+        name: link_url
+        label: Icon URL
+  - type: blocks
+    name: sections
+    label: Sections
+    description: Home Sections
+    template_types:
+      - simple_content
+      - contact
+      - elements
+  - type: text
+    name: layout
+    label: Layout
+    hidden: true
+    default: home
+    config:
+      required: true
+pages:
+  - index.md

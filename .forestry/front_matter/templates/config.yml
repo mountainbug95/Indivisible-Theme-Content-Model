@@ -1,0 +1,37 @@
+---
+label: Config
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: Site title
+    config:
+      required: true
+  - type: text
+    name: landing_id
+    hidden: true
+    default: home
+    config:
+      required: true
+  - type: field_group
+    name: footer
+    label: Footer Configuration
+    fields:
+      - type: text
+        name: copyright
+        label: The copyright text displayed at the bottom of the page
+  - type: select
+    name: palette
+    label: Color Palette
+    description: The color palette used for the page
+    default: cyan
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - cyan
+        - green
+        - red

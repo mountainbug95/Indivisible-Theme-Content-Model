@@ -1,0 +1,27 @@
+---
+label: Section
+hide_body: true
+is_partial: true
+display_field: title
+fields:
+  - type: text
+    name: title
+    label: Section Title
+    config:
+      required: true
+  - type: file
+    name: img_path
+    label: Image
+    description: The Image displayed on the left side of the page
+  - type: text
+    name: img_data_position
+    label: Image Data Position
+    description: Controls the position of an image in the image container
+  - type: text
+    name: section_id
+    label: Section ID
+  - type: text
+    name: component
+    hidden: true
+    config:
+      required: true

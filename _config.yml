@@ -1,0 +1,21 @@
+title: Indivisible
+baseurl: /
+landing_id: home
+footer:
+  copyright: '&copy; Indivisible'
+palette: cyan
+palettes:
+  cyan:
+    sass:
+      accent: '#49c8ff'
+  green:
+    sass:
+      accent: '#45d1a9'
+  red:
+    sass:
+      accent: '#d8475a'
+sass:
+  indentWidth: 4
+  style: nested
+  precision: 10
+permalink: '/posts/:slug:output_ext'
