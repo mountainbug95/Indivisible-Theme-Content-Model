@@ -1,0 +1,197 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: config
+    label: Config
+    files:
+      - name: config
+        label: Config
+        file: _config.yml
+        fields:
+          - name: title
+            label: Title
+            widget: text
+            required: true
+          - name: landing_id
+            widget: hidden
+            required: true
+            default: home
+          - name: footer
+            widget: object
+            required: false
+            label: Footer Configuration
+            fields:
+              - name: copyright
+                widget: string
+                required: false
+                label: The copyright text displayed at the bottom of the page
+          - name: palette
+            widget: select
+            required: true
+            label: Color Palette
+            default: cyan
+            hint: The color palette used for the page
+            options:
+              - cyan
+              - green
+              - red
+  - name: home
+    label: Home
+    files:
+      - name: home
+        label: Home
+        file: index.md
+        fields:
+          - name: title
+            widget: string
+            required: true
+            label: Page Title
+            hint: The bold text displayed at the top of the page
+          - name: subtitle
+            widget: markdown
+            required: false
+            label: Page Subtitle
+            hint: The text displayed below the page title
+          - name: img_path
+            widget: image
+            required: false
+            label: Image
+            hint: The image displayed on the left side of the page
+          - name: img_data_position
+            widget: string
+            required: false
+            label: Image Data Position
+            hint: Controls the position of an image in the image container
+          - name: section_id
+            widget: hidden
+            required: true
+            default: home
+          - name: social_links
+            widget: list
+            required: false
+            label: Social Media Icons
+            hint: >-
+              A list of social media icons displayed along the bottom of the
+              landing page menu
+            fields:
+              - name: title
+                widget: string
+                required: true
+                label: Icon Title
+              - name: icon
+                widget: string
+                required: false
+                label: Icon
+                hint: Font Awesome icon
+              - name: link_url
+                widget: string
+                required: false
+                label: Icon URL
+          - name: sections
+            widget: list
+            required: false
+            label: Sections
+            hint: Home Sections
+            widgets:
+              - name: simple_content
+                widget: object
+                label: Simple Section
+                fields:
+                  - name: img_data_position
+                    widget: string
+                    required: false
+                    label: Image Data Position
+                    hint: Controls the position of an image in the image container
+                  - name: img_path
+                    widget: image
+                    required: false
+                    label: Image
+                    hint: The Image displayed on the left side of the page
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Section Title
+                    default: Simple
+                  - name: subtitle
+                    widget: markdown
+                    required: false
+                    label: Section Subtitle
+                    hint: The text displayed below the section title
+                  - name: section_id
+                    widget: string
+                    required: false
+                    label: Section ID
+                    default: simple
+                  - name: content
+                    widget: markdown
+                    required: false
+                    label: Section Content
+                    hint: The text displayed as content for the section
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: simple_content.html
+              - name: contact
+                widget: object
+                label: Contact Section
+                fields:
+                  - name: img_data_position
+                    widget: string
+                    required: false
+                    label: Image Data Position
+                    hint: Controls the position of an image in the image container
+                  - name: img_path
+                    widget: image
+                    required: false
+                    label: Image
+                    hint: The Image displayed on the left side of the page
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Section Title
+                    default: Contact
+                  - name: section_id
+                    widget: string
+                    required: false
+                    label: Section ID
+                    default: contact
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: contact.html
+              - name: elements
+                widget: object
+                label: Elements Section
+                fields:
+                  - name: img_data_position
+                    widget: string
+                    required: false
+                    label: Image Data Position
+                    hint: Controls the position of an image in the image container
+                  - name: img_path
+                    widget: image
+                    required: false
+                    label: Image
+                    hint: The Image displayed on the left side of the page
+                  - name: title
+                    widget: string
+                    required: true
+                    label: Section Title
+                    default: Elements
+                  - name: section_id
+                    widget: string
+                    required: false
+                    label: Section ID
+                    default: elements
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: elements.html
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: home
