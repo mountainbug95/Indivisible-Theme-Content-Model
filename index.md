@@ -42,7 +42,7 @@ sections:
         title: Work
         weight: 1
     component: simple_content.html
-    widget: simple_content
+    template: simple_content
   - title: About
     subtitle: |-
       Magna feugiat lorem ipsum dolor
@@ -65,7 +65,7 @@ sections:
         title: About
         weight: 2
     component: simple_content.html
-    widget: simple_content
+    template: simple_content
   - title: Contact
     img_path: images/pic04.jpg
     img_data_position: bottom center
@@ -75,7 +75,7 @@ sections:
         title: Contact
         weight: 3
     component: contact.html
-    widget: contact
+    template: contact
   - title: Elements
     img_path: images/pic03.jpg
     img_data_position: center center
@@ -85,6 +85,6 @@ sections:
         title: Elements
         weight: 4
     component: elements.html
-    widget: elements
+    template: elements
 layout: home
 ---
