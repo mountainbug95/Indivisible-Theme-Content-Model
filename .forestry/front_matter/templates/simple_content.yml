@@ -40,6 +40,7 @@ fields:
         format: markdown
   - type: text
     name: component
+    label: Section Component
     hidden: true
     default: simple_content.html
     config:

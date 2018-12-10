@@ -37,29 +37,30 @@ fields:
         - red
   - type: field_group
     name: palettes
+    label: Palettes
     hidden: true
     fields:
       - type: field_group
         name: cyan
+        label: Cyan
         fields:
-          - type: field_group
-            name: sass
-            fields:
-              - type: text
-                name: accent
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette
       - type: field_group
         name: green
+        label: Green
         fields:
-          - type: field_group
-            name: sass
-            fields:
-              - type: text
-                name: accent
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette
       - type: field_group
         name: red
+        label: Red
         fields:
-          - type: field_group
-            name: sass
-            fields:
-              - type: text
-                name: accent
+          - type: include
+            name: include_palette
+            label: Palette
+            template: palette
