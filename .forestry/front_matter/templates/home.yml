@@ -27,6 +27,7 @@ fields:
     description: Controls the position of an image in the image container
   - type: text
     name: section_id
+    label: Section ID
     hidden: true
     default: home
     config:
