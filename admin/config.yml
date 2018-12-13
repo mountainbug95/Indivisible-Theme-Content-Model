@@ -18,6 +18,7 @@ collections:
           - name: landing_id
             widget: hidden
             required: true
+            label: Landing ID
             default: home
           - name: footer
             widget: object
@@ -41,6 +42,7 @@ collections:
           - name: palettes
             widget: hidden
             required: false
+            label: Palettes
   - name: home
     label: Home
     files:
@@ -71,6 +73,7 @@ collections:
           - name: section_id
             widget: hidden
             required: true
+            label: Section ID
             default: home
           - name: social_links
             widget: list
@@ -98,21 +101,21 @@ collections:
             required: false
             label: Sections
             hint: Home Sections
-            widgets:
+            types:
               - name: simple_content
                 widget: object
                 label: Simple Section
                 fields:
-                  - name: img_data_position
-                    widget: string
-                    required: false
-                    label: Image Data Position
-                    hint: Controls the position of an image in the image container
                   - name: img_path
                     widget: image
                     required: false
                     label: Image
                     hint: The Image displayed on the left side of the page
+                  - name: img_data_position
+                    widget: string
+                    required: false
+                    label: Image Data Position
+                    hint: Controls the position of an image in the image container
                   - name: title
                     widget: string
                     required: true
@@ -136,21 +139,22 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: simple_content.html
               - name: contact
                 widget: object
                 label: Contact Section
                 fields:
-                  - name: img_data_position
-                    widget: string
-                    required: false
-                    label: Image Data Position
-                    hint: Controls the position of an image in the image container
                   - name: img_path
                     widget: image
                     required: false
                     label: Image
                     hint: The Image displayed on the left side of the page
+                  - name: img_data_position
+                    widget: string
+                    required: false
+                    label: Image Data Position
+                    hint: Controls the position of an image in the image container
                   - name: title
                     widget: string
                     required: true
@@ -164,21 +168,22 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: contact.html
               - name: elements
                 widget: object
                 label: Elements Section
                 fields:
-                  - name: img_data_position
-                    widget: string
-                    required: false
-                    label: Image Data Position
-                    hint: Controls the position of an image in the image container
                   - name: img_path
                     widget: image
                     required: false
                     label: Image
                     hint: The Image displayed on the left side of the page
+                  - name: img_data_position
+                    widget: string
+                    required: false
+                    label: Image Data Position
+                    hint: Controls the position of an image in the image container
                   - name: title
                     widget: string
                     required: true
@@ -192,6 +197,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: elements.html
           - name: layout
             widget: hidden
